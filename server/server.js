@@ -13,7 +13,7 @@ app.get('/', (req,res)=>{
 app.get('/styles', (req,res)=>{
     res.sendFile(path.join(__dirname,'../public/index.css'))
 })
-
-const port = process.env.PORT || 4005
+          const {PORT} =process.env
+const port = PORT || 4005
 
 app.listen(port, () => console.log(` server running on PORT ${port}`))
